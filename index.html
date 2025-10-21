@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BUILD — Single Line Ticker + Shapes</title>
+    <link rel="stylesheet" href="style.css">
+   
+  </head>
+  <body>
+    <div class="bg-image" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Animated decor (behind) -->
+    <div class="decor" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+    </div>
+
+    <!-- Particle sparkle -->
+    <canvas id="spark" aria-hidden="true"></canvas>
+
+    <!-- Parallax glass pills -->
+    <div class="pills" aria-hidden="true">
+      <div class="pill p1">
+        
+      </div>
+      <div class="pill p2"></div>
+      <div class="pill p3"></div>
+      <div class="pill p4"></div>
+    </div>
+
+    <!-- Mouse cursor dot -->
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- MAIN: BUILD ticker -->
+    <div class="wrap">
+      <div class="row" id="ticker" aria-live="polite">
+        <span class="build">BUILD</span>
+        <span class="viewport">
+          <span class="track">
+            <span>CLOUD SOLUTIONS.</span>
+            <span>WITH SALESFORCE.</span>
+            <span>WITH AI.</span>
+            <span>SOVEREIGN.</span>
+            <span>FOR PEOPLE.</span>
+            <span>THE FUTURE.</span>
+          </span>
+        </span>
+      </div>
+    </div>
+
+      <!-- js -->
+       <script src="main.js"></script>
+  </body>
+</html>
