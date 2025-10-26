@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>BUILD — Single Line Ticker + Shapes</title>
+    <link href="style.css" rel="stylesheet" />
+    <script
+      defer="True"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width,initial-scale=1" name="viewport" />
-  <title>BUILD — Single Line Ticker + Shapes</title>
-  <link href="style.css" rel="stylesheet" />
-  <script defer="True" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-</head>
-
-<body>
-  <div aria-hidden="true" class="bg-image"></div>
-  <div aria-hidden="true" class="grain"></div>
-  <!-- Animated decor (behind) -->
-  <div aria-hidden="true" class="decor">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="ring r1"></div>
-    <div class="ring r2"></div>
-    <div class="ring r3"></div>
-  </div>
-  <!-- Particle sparkle -->
-  <canvas aria-hidden="true" id="spark"></canvas>
-  <!-- Parallax glass pills -->
-  <div aria-hidden="true" class="pills">
-    <div class="pill p1"></div>
-    <div class="pill p2"></div>
-    <div class="pill p3"></div>
-    <div class="pill p4">
-      <img src="new_logo_white.svg" alt="" />
+  <body>
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="video-hero-section.mp4" type="video/mp4" />
+    </video>
+    <div aria-hidden="true" class="bg-image"></div>
+    <div aria-hidden="true" class="grain"></div>
+    <!-- Animated decor (behind) -->
+    <div aria-hidden="true" class="decor">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
     </div>
-  </div>
-  <!-- Mouse cursor dot -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <!-- MAIN: BUILD ticker -->
-  <div class="wrap">
-    <div aria-live="polite" class="row" id="ticker">
-      <span class="build">BUILD</span>
-      <span class="viewport">
-        <span class="track">
-          <a href="https://www.liongate.de/cloud-solutions/" class="text-link">CLOUD SOLUTIONS.</a>
-          <a href="https://www.liongate.de/salesforce/" class="text-link">WITH SALESFORCE.</a>
-          <a href="https://www.liongate.de/de/generative-ki/" class="text-link">WITH AI.</a>
-          <a href="https://www.liongate.de/" class="text-link">SOVEREIGN.</a>
-          <a href="https://www.liongate.de/consulting/" class="text-link">FOR PEOPLE.</a>
-          <a href="https://www.liongate.de/" class="text-link">THE FUTURE.</a>
+    <!-- Particle sparkle -->
+    <canvas aria-hidden="true" id="spark"></canvas>
+    <!-- Parallax glass pills -->
+    <div aria-hidden="true" class="pills">
+      <div class="pill p1"></div>
+      <div class="pill p2"></div>
+      <div class="pill p3"></div>
+      <div class="pill p4"></div>
+    </div>
+    <!-- Mouse cursor dot -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <!-- MAIN: BUILD ticker -->
+    <div class="wrap">
+      <div aria-live="polite" class="row" id="ticker">
+        <span class="build">BUILD</span>
+        <span class="viewport">
+          <span class="track">
+            <a href="https://www.liongate.de/cloud-solutions/" class="text-link"
+              >CLOUD SOLUTIONS.</a
+            >
+            <a href="https://www.liongate.de/salesforce/" class="text-link"
+              >WITH SALESFORCE.</a
+            >
+            <a
+              href="https://www.liongate.de/de/generative-ki/"
+              class="text-link"
+              >WITH AI.</a
+            >
+            <a href="https://www.liongate.de/" class="text-link">SOVEREIGN.</a>
+            <a href="https://www.liongate.de/consulting/" class="text-link"
+              >FOR PEOPLE.</a
+            >
+            <a href="https://www.liongate.de/" class="text-link">THE FUTURE.</a>
+          </span>
         </span>
-      </span>
+      </div>
     </div>
-  </div>
-  <!-- js -->
-  <script defer="True" src="main.js"></script>
-  <div aria-hidden="true" class="mouse-indicator" title="Scroll">
-    <svg aria-hidden="true" fill="none" height="44" viewbox="0 0 28 44" width="28" xmlns="http://www.w3.org/2000/svg">
-      <rect height="41" opacity="0.7" rx="12.5" stroke="white" width="25" x="1.5" y="1.5"></rect>
-      <circle cx="14" cy="11" fill="white" r="3"></circle>
-    </svg>
-  </div>
-</body>
-
+    <!-- js -->
+    <script defer="True" src="main.js"></script>
+    <div aria-hidden="true" class="mouse-indicator" title="Scroll">
+      <svg
+        aria-hidden="true"
+        fill="none"
+        height="44"
+        viewbox="0 0 28 44"
+        width="28"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          height="41"
+          opacity="0.7"
+          rx="12.5"
+          stroke="white"
+          width="25"
+          x="1.5"
+          y="1.5"
+        ></rect>
+        <circle cx="14" cy="11" fill="white" r="3"></circle>
+      </svg>
+    </div>
+  </body>
 </html>
