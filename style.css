@@ -45,6 +45,25 @@ body {
   overflow-x: hidden;
 }
 
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  overlay: #000;
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* adjust alpha (0.0 - 1.0) to taste */
+  pointer-events: none;
+  z-index: 1; /* sits above video/bg-image but below content */
+}
+
 /* Responsive background adjustments */
 @media (max-width: 768px) {
   body {
